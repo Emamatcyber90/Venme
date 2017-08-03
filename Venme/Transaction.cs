@@ -9,12 +9,12 @@ namespace Venme
     public partial class Transaction
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int id { get; set; }
+        public int Id { get; set; }
 
-        public int fromUserId { get; set; }
+        public int FromUserId { get; set; }
 
-        public int toUserId { get; set; }
+        public int ToUserId { get; set; }
 
-        public int amount { get; set; }
+        public int Amount { get; set; }
     }
 }

@@ -211,6 +211,14 @@
     <Compile Include="Migrations\201708031947347_RenameTransactionColumns.Designer.cs">
       <DependentUpon>201708031947347_RenameTransactionColumns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708031953061_CapitalizeTransactionsColumns.cs" />
+    <Compile Include="Migrations\201708031953061_CapitalizeTransactionsColumns.Designer.cs">
+      <DependentUpon>201708031953061_CapitalizeTransactionsColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708031956149_CapitalizeUsersColumns.cs" />
+    <Compile Include="Migrations\201708031956149_CapitalizeUsersColumns.Designer.cs">
+      <DependentUpon>201708031956149_CapitalizeUsersColumns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -299,6 +307,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708031947347_RenameTransactionColumns.resx">
       <DependentUpon>201708031947347_RenameTransactionColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708031953061_CapitalizeTransactionsColumns.resx">
+      <DependentUpon>201708031953061_CapitalizeTransactionsColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708031956149_CapitalizeUsersColumns.resx">
+      <DependentUpon>201708031956149_CapitalizeUsersColumns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

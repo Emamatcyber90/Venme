@@ -18,7 +18,7 @@ namespace Venme
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
-                .Property(e => e.name)
+                .Property(e => e.Name)
                 .IsUnicode(false);
         }
     }
