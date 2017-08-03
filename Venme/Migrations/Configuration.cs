@@ -1,3 +1,5 @@
+using Venme.Models;
+
 namespace Venme.Migrations
 {
     using System;
@@ -5,14 +7,14 @@ namespace Venme.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Venme.VenmeContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<VenmeContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Venme.VenmeContext context)
+        protected override void Seed(VenmeContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -1,11 +1,7 @@
-namespace Venme
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+using System.ComponentModel.DataAnnotations.Schema;
 
+namespace Venme.Models
+{
     public partial class Transaction
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -13,8 +9,12 @@ namespace Venme
 
         public int FromUserId { get; set; }
 
+        public int UserId { get; set; }
+
         public int ToUserId { get; set; }
 
         public int Amount { get; set; }
+
+        public virtual User User { get; set; }
     }
 }
