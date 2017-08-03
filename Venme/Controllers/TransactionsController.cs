@@ -17,7 +17,7 @@ namespace Venme.Controllers
         // GET: Transactions
         public ActionResult Index()
         {
-            var transactions = db.Transactions.Include(t => t.User);
+            var transactions = db.Transactions.Include(t => t.FromUser);
             return View(transactions.ToList());
         }
 
@@ -57,7 +57,7 @@ namespace Venme.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Name", transaction.UserId);
+            ViewBag.UserId = new SelectList(db.Users, "Id", "Name", transaction.FromUserId);
             return View(transaction);
         }
 
@@ -73,7 +73,7 @@ namespace Venme.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Name", transaction.UserId);
+            ViewBag.UserId = new SelectList(db.Users, "Id", "Name", transaction.FromUserId);
             return View(transaction);
         }
 
@@ -90,7 +90,7 @@ namespace Venme.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Name", transaction.UserId);
+            ViewBag.UserId = new SelectList(db.Users, "Id", "Name", transaction.FromUserId);
             return View(transaction);
         }
 

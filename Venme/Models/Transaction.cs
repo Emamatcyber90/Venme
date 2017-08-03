@@ -9,12 +9,10 @@ namespace Venme.Models
 
         public int FromUserId { get; set; }
 
-        public int UserId { get; set; }
-
         public int ToUserId { get; set; }
 
         public int Amount { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual User FromUser { get; set; }
     }
 }

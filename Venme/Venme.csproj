@@ -228,6 +228,14 @@
     <Compile Include="Migrations\201708032049502_NavPropStep2.Designer.cs">
       <DependentUpon>201708032049502_NavPropStep2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708032102246_ChangeReferenceName.cs" />
+    <Compile Include="Migrations\201708032102246_ChangeReferenceName.Designer.cs">
+      <DependentUpon>201708032102246_ChangeReferenceName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708032107382_ChangeReferenceName1.cs" />
+    <Compile Include="Migrations\201708032107382_ChangeReferenceName1.Designer.cs">
+      <DependentUpon>201708032107382_ChangeReferenceName1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -333,6 +341,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708032049502_NavPropStep2.resx">
       <DependentUpon>201708032049502_NavPropStep2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708032102246_ChangeReferenceName.resx">
+      <DependentUpon>201708032102246_ChangeReferenceName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708032107382_ChangeReferenceName1.resx">
+      <DependentUpon>201708032107382_ChangeReferenceName1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
