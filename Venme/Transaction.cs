@@ -11,10 +11,10 @@ namespace Venme
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
-        public int? from { get; set; }
+        public int fromUserId { get; set; }
 
-        public int? to { get; set; }
+        public int toUserId { get; set; }
 
-        public int? amount { get; set; }
+        public int amount { get; set; }
     }
 }
