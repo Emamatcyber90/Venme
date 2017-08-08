@@ -10,7 +10,7 @@ namespace Venme.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Transactions");
         }
 
         public ActionResult About()

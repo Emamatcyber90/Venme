@@ -15,16 +15,31 @@ namespace Venme.Controllers
         private VenmeContext db = new VenmeContext();
 
         // GET: Transactions
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    var transactions = db.Transactions.Include(t => t.FromUser);
+        //    return View(transactions.ToList());
+        //}
+
+        public ActionResult Index(string searchString)
         {
-            var transactions = db.Transactions.Include(t => t.FromUser);
+            
+            var transactions = from t in db.Transactions
+                select t;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                var searchString_int = Int32.Parse(searchString);
+                // DateTime(searchString)
+                transactions = transactions.Where(t => t.FromUserId.Equals(searchString_int)
+                                               || t.ToUserId.Equals(searchString_int));
+            }
+
+            if (!transactions.Any())
+                return View();
+
             return View(transactions.ToList());
         }
-
-        //public ActionResult Index(DateTime datePicked)
-        //{
-        //    return View()
-        //}
 
         // GET: Transactions/Details/5
         public ActionResult Details(int? id)
